@@ -1,0 +1,12 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li *ngFor="let item of paths; let last = last" class="breadcrumb-item" [class.active]="last">
+      <a *ngIf="item.route && !last; else plain" [routerLink]="item.route">
+        {{item.nom}}
+      </a>
+      <ng-template #plain>
+        {{item.nom}}
+      </ng-template>
+    </li>
+  </ol>
+</nav>

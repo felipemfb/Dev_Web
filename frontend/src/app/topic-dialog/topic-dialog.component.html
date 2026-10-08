@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Nouveau Sujet</h2>
+<div mat-dialog-content class="body">
+  <label>Saisissez un nouveau sujet :</label>
+  <input class="input-topic" [(ngModel)]="subject" />
+  <p class="error" *ngIf="errorMessage">
+    {{errorMessage}}
+  </p>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button class="btn-rose" (click)="onCancel()">Fermer</button>
+  <button class="btn-blue" (click)="createTopic()">Créer</button>
+</div>

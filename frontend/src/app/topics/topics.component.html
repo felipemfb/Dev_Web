@@ -1,0 +1,42 @@
+<div class="topics-container">
+  <app-breadcrumb [paths]="breadcrumb"></app-breadcrumb>
+  <div class="top-bar">
+    <app-create-topic-dialog *ngIf="courseId !== null" [courseId]="courseId"></app-create-topic-dialog>
+  </div>
+
+  <table class="topics-table">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>#posts</th>
+        <th>Dernier message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of paginatedTopics">
+        <td>{{t.title}}</td>
+        <td>{{t.num_posts}}</td>
+        <td>{{t.last_message}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination-container">
+    <div class="items-per-page">
+      <span>Items per page:</span>
+      <select [(ngModel)]="pageSize" (change)="page = 1">
+        <option [ngValue]="5">5</option>
+        <option [ngValue]="10">10</option>
+        <option [ngValue]="20">20</option>
+      </select>
+    </div>
+
+    <div class="pagination-info">
+      {{paginationLabel}}
+      <button (click)="page = 1">|&lt;</button>
+      <button (click)="page = page - 1" [disabled]="page === 1">&lt;</button>
+      <button (click)="page = page + 1" [disabled]="page >= maxPage">&gt;</button>
+      <button (click)="page = maxPage">&gt;|</button>
+    </div>
+  </div>
+</div>

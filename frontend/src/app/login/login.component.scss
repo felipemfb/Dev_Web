@@ -1,0 +1,31 @@
+
+.login-container {
+  width: 650px;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  width: 220px;
+  margin-right: 15px;
+}
+
+.form-row input {
+  width: 250px;
+}
+
+button {
+  width: 140px;
+  margin-top: 10px;
+}
+

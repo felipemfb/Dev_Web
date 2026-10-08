@@ -1,0 +1,23 @@
+<div class="login-container">
+  @if (errorMessage){
+    <div class="alert alert-danger" role="alert">
+      {{errorMessage}}
+    </div>
+  }
+  <form (ngSubmit)="submit()">
+    <h2>Veuillez vous authentifier :</h2>
+    <div class="form-row">
+      <label for="login">Entrez votre nom :</label>
+      <input id="login" type="text" class="form-control" [(ngModel)]="login" name="login">
+    </div>
+
+    <div class="form-row">
+      <label for="password">Entrez votre mot de passe :</label>
+      <input id="password" type="password" class="form-control" [(ngModel)]="password" name="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Se connecter
+    </button>
+  </form>
+</div>

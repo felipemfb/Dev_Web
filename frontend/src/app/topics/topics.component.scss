@@ -1,0 +1,98 @@
+.topics-container {
+  width: 80%;
+  margin: 80px auto 0 auto;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin: 15px 0;
+}
+
+.new-topic-btn {
+  background: #0d47a1;
+  color: white;
+  border: none;
+
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-topic-btn:hover {
+  background: #08306b;
+}
+
+.topics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.topics-table thead {
+  background: #1976d2;
+  color: white;
+}
+
+.topics-table th {
+  padding: 12px;
+  font-weight: 600;
+}
+
+.topics-table td {
+  padding: 12px;
+  border: 1px solid #d6d6d6;
+  background: white;
+
+  color: black;
+}
+
+.pagination-container {
+  margin-top: 15px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
+.items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.items-per-page select {
+  width: 70px;
+}
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-info button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pagination-info button:hover {
+  color: #1976d2;
+}
+
+.btn-create-topic {
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-create-topic:hover {
+  background: #0062cc;
+}

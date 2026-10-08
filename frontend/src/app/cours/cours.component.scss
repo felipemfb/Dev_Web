@@ -1,0 +1,83 @@
+.courses-container {
+  width: 80%;
+  margin: 80px auto 0 auto;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.courses-table thead {
+  background: #1976d2;
+  color: white;
+}
+
+.courses-table th {
+  padding: 12px;
+  font-weight: 600;
+}
+
+.courses-table td {
+  padding: 12px;
+  border: 1px solid #d6d6d6;
+  background: white;
+  color: black;
+}
+
+.courses-table tbody tr {
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.courses-table tbody tr:hover {
+  background: #f5f5f5;
+}
+
+.pagination-container {
+  margin-top: 15px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
+.items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.items-per-page select {
+  width: 70px;
+}
+
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-info button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pagination-info button:hover {
+  color: #1976d2;
+}
+
+.pagination-info button:disabled {
+  color: #bdbdbd;
+  cursor: default;
+}

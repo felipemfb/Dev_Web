@@ -1,0 +1,51 @@
+<div class="courses-container">
+  <h2>Liste des cours auxquels vous avez accès :</h2>
+  <table class="courses-table">
+    <thead>
+      <tr>
+        <th>Nom du cours</th>
+        <th>#topics</th>
+        <th>#posts</th>
+        <th>Dernier message</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        *ngFor="let c of paginatedCourses"
+        (click)="goToTopics(c)">
+        <td>{{c.nom}}</td>
+        <td>{{c.nb_topics}}</td>
+        <td>{{c.nb_posts}}</td>
+        <td>{{c.last_message}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination-container">
+    <div class="items-per-page">
+      <span>Items per page:</span>
+      <select [(ngModel)]="pageSize" (change)="page = 1">
+        <option [ngValue]="2">2</option>
+        <option [ngValue]="10">10</option>
+        <option [ngValue]="20">20</option>
+      </select>
+    </div>
+
+    <div class="pagination-info">
+      {{paginationLabel}}
+      <button (click)="page = 1">|&lt;</button>
+      <button (click)="page = page - 1" [disabled]="page === 1">
+        &lt;
+      </button>
+
+      <button (click)="page = page + 1" [disabled]="page >= maxPage">
+        &gt;
+      </button>
+
+      <button (click)="page = maxPage">
+        &gt;|
+      </button>
+    </div>
+  </div>
+</div>
